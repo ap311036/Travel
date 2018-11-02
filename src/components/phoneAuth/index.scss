@@ -1,0 +1,6 @@
+#signInButtonElement {
+    display: inline-block;
+    @media (max-width: 767px) {
+        display: none;
+    }
+}

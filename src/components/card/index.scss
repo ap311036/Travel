@@ -1,0 +1,72 @@
+.card_section {
+  padding: 0 7.5px !important;
+}
+
+.card {
+  transition: all ease-in-out .3s;
+  margin-bottom: 20px;
+  .img {
+    max-width: 100%;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .card-title {
+    font-size: 0.95rem;
+    height: 44px;
+    text-align: justify;
+  }
+  .card-text,
+  .card-subtitle {
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+    height: 20px;
+    font-size: 0.75rem;
+    text-align: left;
+  }
+  .card-introduction {
+    color: #666;
+    margin-bottom: 1.75rem;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .card-foot {
+    span {
+      margin-left: 2px;
+      vertical-align: middle;
+      color: #999;
+      font-size: 0.75rem;
+    }
+    .star {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-right: 0.5px;
+      margin-top: -1px;
+      vertical-align: middle;
+    }
+    .star-0 {
+      background-image: url('https://www.kkday.com/assets/img/ic_star4_0.svg');
+    }
+    .star-50 {
+      background-image: url('https://www.kkday.com/assets/img/ic_star4_2.svg');
+    }
+    .star-100 {
+      background-image: url('https://www.kkday.com/assets/img/ic_star4_4.svg');
+    }
+  }
+  .btn {
+    &:hover {
+      background-color: #5ca2a7;
+      border-color: #5ca2a7;
+    }
+  }
+}

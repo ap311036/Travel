@@ -1,0 +1,295 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  font-family: 'Noto Sans TC';
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  position: relative;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter.slide-enter-active {
+  transform: translateX(0%);
+  transition: transform 500ms ease-in;
+}
+
+.slide-leave {
+  transform: translateX(0%);
+}
+
+.slide-leave.slide-leave-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in;
+}
+
+.whywe {
+  padding: 60px 0 80px 0;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .75) 50%), url(https://www.kkday.com/assets/css/../img/bg_why_kkday.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-weight: bold;
+  font-family: sans-serif;
+  .title {
+    font-weight: 700;
+  }
+  .sub-title {
+    width: 100%;
+    padding: 20px;
+    color: #666;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  a {
+    color: white;
+    padding: 12px 50px;
+    box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.detail {
+  button:not(.Toastify__close-button) {
+    background-color: #26bec9;
+    border: #26bec9;
+    &:hover {
+      background: #5ca2a7 !important;
+    }
+    &:active {
+      background-color: #4fa2a8 !important;
+      border-color: #4fa2a8 !important;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .booking-bar {
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    position: sticky;
+    top: 20px;
+    margin-bottom: 15px;
+    .btnContainer {
+      // width: 80%;
+      @media (max-width: 768px) {
+        // position: fixed;
+        // top: 100%;
+        // width: 100%;
+        // padding: 13px;
+        // transform: translateY(-100%);
+        // background-color: #ffffff;
+        // z-index: 1;
+      } // margin-bottom: 1rem;
+    }
+    .booking-bar-content {
+      padding: 10px;
+    }
+    .product-pricing {
+      span {
+        color: #999;
+      }
+      h2 {
+        color: #26bec9;
+        display: inline;
+      }
+    }
+  }
+}
+
+.shoppingCart {
+  >span {
+    font-size: 1.8rem;
+  }
+  .empty {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    transform: scaleX(0.95);
+    .img {
+      display: inline-block;
+      flex-shrink: 0;
+      height: 60px;
+      width: 60px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+    .title {
+      font-size: 1.3rem;
+      text-align: justify;
+      margin-left: 5px;
+    }
+    .location {
+      font-size: 1rem;
+    }
+    .remove {
+      display: flex;
+      color: #e0dfdf;
+      border-left: 1px solid #e0dfdf;
+      padding-left: 15px;
+      margin-left: 15px;
+    }
+  }
+}
+
+.totalPriceContainer {
+  margin-bottom: 30px;
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  .btn {
+    margin-top: 15px;
+  }
+}
+
+.search {
+  .container {
+    width: auto;
+  }
+  .btn-secondary {
+    display: none;
+  }
+  .filter {
+    transition: .5s;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      @media (min-width: 992px) {
+        position: sticky;
+        top: 20px;
+      }
+      border: 1px solid #e1e1e1;
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 15px 20px;
+      transition: .5s;
+      &.open {
+        color: #666;
+        background-color: #f4f4f4;
+        border-color: #e6e6e6;
+      }
+    }
+  }
+  .searchContainer {
+    transition: .5s;
+    @media (min-width: 992px) {
+      margin-top: -60px;
+    }
+  }
+  .dropdown-menu {
+    border: none;
+    top: 7px !important;
+    &:before {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 8px 7px;
+      border-color: transparent transparent #fff transparent;
+      width: 0;
+      height: 0;
+      top: -7px;
+      left: 12px;
+    }
+  }
+  .dropdown-item,
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+}
+
+.loading-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(white, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .loading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(48deg, #ebf1f3 0%, #0d8aa59c 30%), url(http://pngimg.com/uploads/world_map/world_map_PNG31.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 5px solid #19bee1ba;
+    animation: mapTranslate 5s infinite linear reverse;
+    &:after {
+      content: '';
+      background: trasparent;
+      width: 140%;
+      height: 140%;
+      position: absolute;
+      border-radius: 100%;
+      top: -20%;
+      left: -20%;
+      opacity: 0.7;
+      box-shadow: rgba(255, 255, 255, 0.6) -4px -5px 3px -3px;
+      animation: rotate 2s infinite linear;
+    }
+  }
+  @keyframes rotatePlant {
+    0% {
+      transform: translateX(50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(50%) rotate(360deg);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes mapTranslate {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 172% 0%;
+    }
+  }
+}
