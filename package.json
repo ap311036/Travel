@@ -2,7 +2,7 @@
   "name": "travel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ap311036.github.io/Travel/",
+  "homepage": "https://ap311036.github.io/travel/",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
