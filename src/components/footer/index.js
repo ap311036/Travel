@@ -52,7 +52,7 @@ export default class Footer extends Component {
                                   <Friend lineid="@sim1246v" />
                                 </div>
                                 <div className="mt-3 mb-3 d-sm-none d-md-block">
-                                  <img src={`${require('../../img/ERkmAG5pU8.png')}`} alt="QRCode"/>
+                                  <img src={`${require('../../asset/img/ERkmAG5pU8.png')}`} alt="QRCode"/>
                                 </div>
                                 <ul className="list-unstyled">
                                     <li><a><Icon size={21} icon={facebookF} /></a></li>

@@ -6,47 +6,47 @@ import './index.scss';
 
 const items = [
     {
-        src: require('../../img/jpg(1).jpg'),
+        src: require('../../asset/img/jpg(1).jpg'),
         altText: 'Slide 1',
         caption: 'Slide 1'
     },
     {
-        src: require('../../img/jpg(2).jpg'),
+        src: require('../../asset/img/jpg(2).jpg'),
         altText: 'Slide 2',
         caption: 'Slide 2'
     },
     {
-        src: require('../../img/jpg(3).jpg'),
+        src: require('../../asset/img/jpg(3).jpg'),
         altText: 'Slide 3',
         caption: 'Slide 3'
     },
     {
-        src: require('../../img/jpg(4).jpg'),
+        src: require('../../asset/img/jpg(4).jpg'),
         altText: 'Slide 4',
         caption: 'Slide 4'
     },
     {
-        src: require('../../img/jpg(5).jpg'),
+        src: require('../../asset/img/jpg(5).jpg'),
         altText: 'Slide 5',
         caption: 'Slide 5'
     },
     {
-        src: require('../../img/jpg(6).jpg'),
+        src: require('../../asset/img/jpg(6).jpg'),
         altText: 'Slide 6',
         caption: 'Slide 6'
     },
     {
-        src: require('../../img/jpg(7).jpg'),
+        src: require('../../asset/img/jpg(7).jpg'),
         altText: 'Slide 7',
         caption: 'Slide 7'
     },
     {
-        src: require('../../img/jpg(8).jpg'),
+        src: require('../../asset/img/jpg(8).jpg'),
         altText: 'Slide 8',
         caption: 'Slide 8'
     },
     {
-        src: require('../../img/png.png'),
+        src: require('../../asset/img/png.png'),
         altText: 'Slide 9',
         caption: 'Slide 9'
     }
