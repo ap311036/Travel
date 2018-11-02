@@ -30,7 +30,6 @@ export function* cleanCartSaga(action) {
 //   // yield put(cleanCart(action));
 // }
 
-// Our watcher Saga: 在每个 INCREMENT_ASYNC action spawn 一个新的 incrementAsync 任务
 export default function* watchCartSaga() {
   try {
     const cart = yield call(getLocal);

@@ -2,21 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { ADD_TO_CART_SAGA } from '../redux/constants/ActionTypes';
-// import { addToCart } from '../redux/actions';
-// import firebase from 'firebase/app';
-// import Timeline from "../components/timeLine";
 import Banner from "../components/banner";
-// import { Button } from 'reactstrap';
-
 import SearchContainer from '../containers/searchContainer';
-
-// import { ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 
 class Search extends React.Component {
   constructor(props) {
     super(props)
-  
     this.state = {
        loaded: false,
        page: 1,
@@ -36,33 +27,8 @@ class Search extends React.Component {
   
   componentDidMount() {
     window.scrollTo(0, 0);
-    // const fetchServer = () => {
-    //   const location = {
-    //     pathname: `/search/${this.props.match.params.id}`,
-    //     search: `?sort=hdesc`
-    //   }
-    //   const countryQuery = this.props.match.params.id;
-    //   const sortQuery = this.props.location.search.split('?')[1] || 'sort=hdsec';
-    //   return fetch(`https://tun-hsiang.000webhostapp.com/kkajaxcountry.php?page=1&country=${countryQuery}&${sortQuery}`)
-    //     .then((res) => { return res.json() })
-    //     .then((data) => {
-    //       console.log(data);
-    //       this.setState({ loaded: true, data }, () => {
-    //         // !this.props.location.search.split('?')[1] && this.props.history.replace(location)
-    //       })
-    //     })
-    // };
-    // fetchServer();
   }
 
-  commafy = (num = 0) => {
-    num = String(num);
-    let re = /(-?\d+)(\d{3})/;
-    while (re.test(num)) {
-      num = num.replace(re, '$1,$2');
-    }
-    return num;
-  }
   onChangeSort = (sort) => {
     const location = {
       pathname: `/search/${this.props.match.params.id}`,
@@ -113,29 +79,33 @@ class Search extends React.Component {
   }
 
   render() {
-    // console.log(JSON.stringify(this.props.location.search.split('?')[1]));
+    const {
+      data,
+      startPage,
+      loaded,
+    } = this.state;
     return (
       <div className="search">
         <Banner background={'linear-gradient(rgba(250,250,250,0) 20%, #f5f5f5 100%), linear-gradient(45deg,#64b3f4 0%,#26bec9 50%)'}>
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h3>{this.state.data && this.state.data.page_title}</h3>
+              <h3>{data && data.page_title}</h3>
             </div>
           </div>
         </div>
         </Banner>
         {
-          this.state.data &&
+          data &&
           <SearchContainer
-            products={this.state.data}
+            products={data}
             onChangeSort={this.onChangeSort}
             onChangePage={this.onChangePage}
-            startPage={this.state.startPage}
+            startPage={startPage}
           />
         }
         {
-          !this.state.loaded &&
+          !loaded &&
           <div className="col-12 loading-container"><div className="loading"></div></div>
         }
       </div>

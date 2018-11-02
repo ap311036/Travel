@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter,
   Route,
@@ -15,6 +15,7 @@ import Header from '../components/header';
 import Footer from "../components/footer";
 import { connect } from 'react-redux';
 import { LOGIN_MEMBER_SAGA, LOGOUT_MEMBER_SAGA } from "../redux/constants/ActionTypes";
+
 const RouteFallback = (props) => {
   console.log('route fallback with location: ', props.location);
   return <Redirect to={{
@@ -22,32 +23,30 @@ const RouteFallback = (props) => {
     from: props.location
   }} />
 }
-class Router extends Component {
 
-  render() {
-    return (
-      <BrowserRouter basename={process.env.PUBLIC_URL} >
-        <div>
-          <Header
-            user={this.props.user}
-            cart={this.props.cart}
-            logoutMemberSaga={this.props.logoutMemberSaga}
-            loginMemberSaga={this.props.loginMemberSaga}
-          />
-          <Switch>
-            <Route path="/" exact render={Main} />
-            <Route path="/detail" component={Detail} />
-            <Route path="/search/:id" component={Search} />
-            <Route path="/checkPage" component={CheckPage} />
-            <Route path="/bill" component={Bill} />
-            <Route path="/thanks" component={Thanks} />
-            <Route component={RouteFallback} />
-          </Switch>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    )
-  };
+const Router = props => {
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL} >
+      <div>
+        <Header
+          user={props.user}
+          cart={props.cart}
+          logoutMemberSaga={props.logoutMemberSaga}
+          loginMemberSaga={props.loginMemberSaga}
+        />
+        <Switch>
+          <Route path="/" exact render={Main} />
+          <Route path="/detail" component={Detail} />
+          <Route path="/search/:id" component={Search} />
+          <Route path="/checkPage" component={CheckPage} />
+          <Route path="/bill" component={Bill} />
+          <Route path="/thanks" component={Thanks} />
+          <Route component={RouteFallback} />
+        </Switch>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  )
 };
 
 const mapStateToProps = state => {

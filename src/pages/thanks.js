@@ -6,7 +6,7 @@ const Thanks = (props) => {
   return (
     <div className="container">
       <div className="col-12 d-flex justify-content-center align-items-center flex-column">
-        <img src={require('../img/IMG_4481.png')} alt="thanks" style={{ width: '100%' }} />
+        <img src={require('../asset/img/IMG_4481.png')} alt="thanks" style={{ width: '100%' }} />
         <p>訂單編號: {props.location.pathname.split('/')[2]}</p>
         <br/>
         <p>請使用下方加入Line功能加入官方帳號</p>
