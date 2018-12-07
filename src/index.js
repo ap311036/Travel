@@ -18,9 +18,17 @@ const store = createStore(
 )
 sagaMiddleware.run(mySaga);
 
-ReactDOM.render(
+const App = () => {
+  return (
     <Provider store={store}>
-      <Routes/>
+      <Routes />
     </Provider>
-, document.getElementById('root'));
+  )
+}
+
+ReactDOM.render(
+  <App/>
+  , document.getElementById('root') || document.createElement('div')); // for testing purposes
 registerServiceWorker();
+
+export default App;

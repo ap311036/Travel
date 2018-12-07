@@ -37,7 +37,7 @@ class Hearder extends Component {
     return (
       <div className="container header">
         <Navbar color="faded" light>
-          <NavbarBrand onClick={() => this.props.history.push("/")}><img src="https://www.liontravel.com/_shared/bundle/files/49d7c8edb044a517f45c95589c969797.png" alt="logo" className="header-logo" /></NavbarBrand>
+          <NavbarBrand onClick={() => this.props.history.push("/")}><img src="https://www.liontravel.com/_shared/bundle/files/49d7c8edb044a517f45c95589c969797.png" alt="logo" className="header-logo" style={{display: 'none'}} /></NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2">
             <span className="navbar-toggler-icon"></span>
             {(this.state.collapsed && this.props.cart.length !== 0) && <span className="count">{this.props.cart.length}</span>}

@@ -40,7 +40,8 @@ export default function* watchCartSaga() {
       }
     }
   } catch (error) {
-    console.error(error);
+    // localStroage 沒有購物車資料
+    // console.error(error);
   }
   yield takeEvery('ADD_TO_CART_SAGA', addToCartSaga);
   yield takeEvery('REMOVE_FROM_CART_SAGA', removeFromCartSaga);
