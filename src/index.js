@@ -8,9 +8,17 @@ import { Provider } from "react-redux";
 import { configureStore } from './redux';
 const store = configureStore();
 
-ReactDOM.render(
+const App = () => {
+  return (
     <Provider store={store}>
-      <Routes/>
+      <Routes />
     </Provider>
-, document.getElementById('root'));
+  )
+}
+
+ReactDOM.render(
+  <App/>
+  , document.getElementById('root') || document.createElement('div')); // for testing purposes
 registerServiceWorker();
+
+export default App;

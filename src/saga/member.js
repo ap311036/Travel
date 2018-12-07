@@ -22,7 +22,8 @@ export default function* watchLoginMemberSaga() {
     console.log(user);
     yield put(login(user));
   } catch (error) {
-    console.error(error);
+    // 如果沒有會員登入
+    // console.error(error);
   }
   yield call(visitorRecord);
   yield takeEvery('LOGIN_MEMBER_SAGA', loginMemberSaga);
