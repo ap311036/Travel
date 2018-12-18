@@ -14,7 +14,7 @@ import Main from '../pages/main';
 import Spotify from '../pages/Spotify';
 import Header from '../components/header';
 import Footer from "../components/footer";
-import Animate from "./Animate";
+import Animate from "./animate";
 import { connect } from 'react-redux';
 import { LOGIN_MEMBER_SAGA, LOGOUT_MEMBER_SAGA } from "../redux/constants/ActionTypes";
 const RouteFallback = (props) => {

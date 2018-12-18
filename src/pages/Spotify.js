@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Sporify extends Component {
+export default class Spotify extends Component {
   constructor(props) {
     super(props);
     // set the initial state
