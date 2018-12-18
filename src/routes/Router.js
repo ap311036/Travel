@@ -11,7 +11,7 @@ import CheckPage from "../pages/checkPage";
 import Bill from "../pages/bill";
 import Thanks from "../pages/thanks";
 import Main from '../pages/main';
-import Spotify from '../pages/Spotify';
+import Spotify from '../pages/spotify';
 import Header from '../components/header';
 import Footer from "../components/footer";
 import { connect } from 'react-redux';
