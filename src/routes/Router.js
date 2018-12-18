@@ -11,7 +11,7 @@ import CheckPage from "../pages/checkPage";
 import Bill from "../pages/bill";
 import Thanks from "../pages/thanks";
 import Main from '../pages/main';
-import Sporify from '../pages/Spotify';
+import Spotify from '../pages/Spotify';
 import Header from '../components/header';
 import Footer from "../components/footer";
 import Animate from "./Animate";
@@ -45,7 +45,7 @@ class Router extends Component {
               <Route path="/checkPage" component={CheckPage} />
               <Route path="/bill" component={Bill} />
               <Route path="/thanks" component={Thanks} />
-              <Route path="/spotify" component={Sporify} />
+              <Route path="/spotify" component={Spotify} />
               <Route component={RouteFallback} />
             </Switch>
           </Animate>
