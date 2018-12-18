@@ -14,7 +14,6 @@ import Main from '../pages/main';
 import Spotify from '../pages/Spotify';
 import Header from '../components/header';
 import Footer from "../components/footer";
-import Animate from "./animate";
 import { connect } from 'react-redux';
 import { LOGIN_MEMBER_SAGA, LOGOUT_MEMBER_SAGA } from "../redux/constants/ActionTypes";
 const RouteFallback = (props) => {
@@ -27,7 +26,6 @@ const RouteFallback = (props) => {
 class Router extends Component {
 
   render() {
-    console.log(this.props)
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL} >
         <div>
@@ -37,7 +35,6 @@ class Router extends Component {
             logoutMemberSaga={this.props.logoutMemberSaga}
             loginMemberSaga={this.props.loginMemberSaga}
           />
-          <Animate>
             <Switch>
               <Route path="/" exact render={Main} />
               <Route path="/detail" component={Detail} />
@@ -48,7 +45,6 @@ class Router extends Component {
               <Route path="/spotify" component={Spotify} />
               <Route component={RouteFallback} />
             </Switch>
-          </Animate>
           <Footer />
         </div>
       </BrowserRouter>
