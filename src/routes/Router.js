@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter,
   Route,
@@ -24,6 +24,7 @@ const RouteFallback = (props) => {
     from: props.location
   }} />
 }
+class Router extends Component {
 
   render() {
     return (
@@ -35,16 +36,16 @@ const RouteFallback = (props) => {
             logoutMemberSaga={this.props.logoutMemberSaga}
             loginMemberSaga={this.props.loginMemberSaga}
           />
-            <Switch>
-              <Route path="/" exact render={Main} />
-              <Route path="/detail" component={Detail} />
-              <Route path="/search/:id" component={Search} />
-              <Route path="/checkPage" component={CheckPage} />
-              <Route path="/bill" component={Bill} />
-              <Route path="/thanks" component={Thanks} />
-              <Route path="/spotify" component={Spotify} />
-              <Route component={RouteFallback} />
-            </Switch>
+          <Switch>
+            <Route path="/" exact render={Main} />
+            <Route path="/detail" component={Detail} />
+            <Route path="/search/:id" component={Search} />
+            <Route path="/checkPage" component={CheckPage} />
+            <Route path="/bill" component={Bill} />
+            <Route path="/thanks" component={Thanks} />
+            <Route path="/spotify" component={Spotify} />
+            <Route component={RouteFallback} />
+          </Switch>
           <Footer />
         </div>
       </BrowserRouter>
