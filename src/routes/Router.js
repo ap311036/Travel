@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter,
   Route,
@@ -24,7 +24,7 @@ const RouteFallback = (props) => {
     from: props.location
   }} />
 }
-
+class Router extends Component {
   render() {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL} >
