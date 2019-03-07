@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../untils/console.image';
 
 export default class Spotify extends Component {
   constructor(props) {
@@ -161,7 +162,7 @@ export default class Spotify extends Component {
     } = this.state;
     
     return (
-      <div className="App">
+      <div className="spotify">
         <div className="App-header">
           <h2>Now Playing</h2>
           <p>A Spotify Web Playback API Demo.</p>

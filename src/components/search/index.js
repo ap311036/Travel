@@ -45,7 +45,7 @@ const OgData = [
     hot: false
   }
 ];
-console.log(!!isChrome, !!isSafari)
+console.log('!!isChrome', !!isChrome, '!!isSafari', !!isSafari)
 export default class Search extends Component {
 	state = {
     dropdownOpen: false,
