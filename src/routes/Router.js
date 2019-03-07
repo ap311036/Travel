@@ -25,7 +25,6 @@ const RouteFallback = (props) => {
   }} />
 }
 class Router extends Component {
-
   render() {
     return (
       <BrowserRouter basename={process.env.PUBLIC_URL} >
